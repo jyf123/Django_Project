@@ -36,7 +36,8 @@ urlpatterns = [
     path('tables.html',views.sub9),
     path('icons.html',views.sub10),
     path('page-charts.html',views.sub11),
-    path('test.html',views.sub12)
+    path('test.html',views.sub12),
+    path('people.html',views.sub13)
 
 
 

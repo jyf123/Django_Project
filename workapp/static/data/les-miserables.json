@@ -1,0 +1,109 @@
+{
+    "nodes": [
+      {
+        "id": "0",
+        "name": "特朗普",
+        "symbolSize": 19,
+        "x": 0,
+        "y": 0,
+        "value": 28.685715,
+        "category": 0
+      },
+      {
+        "id": "1",
+        "name": "拜登",
+        "symbolSize": 19,
+        "x": 200,
+        "y": 200,
+        "value": 4,
+        "category": 0
+      },
+      {
+        "id": "2",
+        "name": "人111",
+        "symbolSize": 19,
+        "x": -200,
+        "y": 200,
+        "value": 9.485714,
+        "category": 1
+      },
+      {
+        "id": "3",
+        "name": "人222",
+        "symbolSize": 19,
+        "x": -200,
+        "y": 235,
+        "value": 9.485714,
+        "category": 1
+      },
+      {
+        "id": "4",
+        "name": "人333",
+        "symbolSize": 19,
+        "x": 200,
+        "y": -200,
+        "value": 4,
+        "category": 0
+      },
+      {
+        "id": "5",
+        "name": "人444",
+        "symbolSize": 19,
+        "x": -200,
+        "y": -200,
+        "value": 4,
+        "category": 3
+      },
+      {
+        "id": "6",
+        "name": "人555",
+        "symbolSize": 19,
+        "x": -200,
+        "y": 100,
+        "value": 4,
+        "category": 2
+      }
+
+    ],
+    "links": [
+      {
+        "source": "1",
+        "target": "0"
+      },
+      {
+        "source": "2",
+        "target": "0"
+      },
+      {
+        "source": "3",
+        "target": "0"
+      },
+      {
+        "source": "4",
+        "target": "0"
+      },
+      {
+        "source": "5",
+        "target": "0"
+      },
+      {
+        "source": "6",
+        "target": "0"
+      }
+    ],
+    "categories": [
+      {
+        "name": "政治"
+      },
+      {
+        "name": "军事"
+      },
+      {
+        "name": "娱乐"
+      },
+      {
+        "name": "文化"
+      }
+
+    ]
+  }

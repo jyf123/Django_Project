@@ -113,5 +113,8 @@ def sub12(request):
     data = ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
     return render(request, 'test.html',{'datas':json.dumps(data)})
 
+def sub13(request):
+    return render(request,'people.html')
+
 # def upload1(request):
 #     return render(request, 'sub1.html')
