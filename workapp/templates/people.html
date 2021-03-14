@@ -20,8 +20,12 @@
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon.png">
-    <script src="static/js/echarts.min.js"></script>
     <script src="static/vendor/jquery/jquery.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/echarts-wordcloud.js"></script>
+   <!-- <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>-->
+        <!-- <script src="../../echarts/dist/echarts.js"></script> -->
+
 </head>
 
 <body>
@@ -120,128 +124,113 @@
         </div>
     </nav>
     <!-- END NAVBAR -->
-    <!-- LEFT SIDEBAR -->
-    <div id="sidebar-nav" class="sidebar">
-        <div class="sidebar-scroll">
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                    <li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-                    <li><a href="charts.html" class="active"><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-                    <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-                    <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-                    <li>
-                        <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-                        <div id="subPages" class="collapse ">
-                            <ul class="nav">
-                                <li><a href="page-profile.html" class="">Profile</a></li>
-                                <li><a href="page-login.html" class="">Login</a></li>
-                                <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-                    <li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-                    <li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- END LEFT SIDEBAR -->
+
     <!-- MAIN -->
-    <div class="main">
+  <!--  <div class="main" > -->
         <!-- MAIN CONTENT -->
         <div class="main-content">
             <div class="container-fluid">
-                <h3 class="page-title">Charts</h3>
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="profile-left" style="width: 28%">
+								<!-- PROFILE HEADER -->
+								<div class="profile-header">
+									<div class="overlay"></div>
+									<div class="profile-main">
+										<img src="static/img/user0.png" width = 100px class="img-circle" alt="Avatar">
+										<h3 class="name">{{ name }}</h3>
+										<span class="online-status status-available">Available</span>
+									</div>
+									<div class="profile-stat">
+										<div class="row">
+											<div class="col-md-4 stat-item">
+												45 <span>Projects</span>
+											</div>
+											<div class="col-md-4 stat-item">
+												15 <span>Awards</span>
+											</div>
+											<div class="col-md-4 stat-item">
+												2174 <span>Points</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END PROFILE HEADER -->
+								<!-- PROFILE DETAIL -->
+								<div class="profile-detail">
+									<div class="profile-info">
+										<h4 class="heading">Basic Info</h4>
+										<ul class="list-unstyled list-justify">
+											<li>Birthdate <span>24 Aug, 2016</span></li>
+											<li>Mobile <span>(124) 823409234</span></li>
+											<li>Email <span>samuel@mydomain.com</span></li>
+											<li>Website <span><a href="#">www.themeineed.com</a></span></li>
+										</ul>
+									</div>
+									<div class="profile-info">
+										<h4 class="heading">Social</h4>
+										<ul class="list-inline social-icons">
+											<li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#" class="google-plus-bg"><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="#" class="github-bg"><i class="fa fa-github"></i></a></li>
+										</ul>
+									</div>
+									<div class="profile-info">
+										<h4 class="heading">About</h4>
+										<p>Interactively fashion excellent information after distinctive outsourcing.</p>
+									</div>
+									<div class="text-center"><a href="#" class="btn btn-primary">Edit Profile</a></div>
+								</div>
+								<!-- END PROFILE DETAIL -->
+							</div>
+                <!-- TABBED CONTENT -->
+                <div class="tab" style="position: relative;left: 30%;">
+                <div class="custom-tabs-line tabs-line-bottom left-aligned">
+                    <ul class="nav" role="tablist">
+                        <li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">基本信息思维图谱</a></li>
+                        <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">人物关系图谱</a></li>
+                        <li><a href="#tab-bottom-left3" role="tab" data-toggle="tab">人物动态</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-bottom-left1">
+                        <div id="main1" style="width: 800px;height: 600px"></div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-bottom-left2">
+                        <div id="main2" style="width: 800px;height: 600px"></div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-bottom-left3">
+                        <div class="row">
+                    <div class="col-md-6" style="width: 35%">
                         <div class="panel">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">人物关系</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div id="main1" style="width: 500px;height:300px;"></div>
+                            <div class="panel-body" style="padding-top: 10px">
+                                <div id="main3" style="width: 400px;height:300px;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="width: 35%">
                         <div class="panel">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">人物相关事件</h3>
-                            </div>
                             <div class="panel-body">
-                                <div id="main2" style="width: 500px;height:300px;"></div>
+                                <div id="main4" style="width: 400px;height:300px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-7">
-                        <!-- TODO LIST -->
-                        <div class="panel panel-scrolling">
+                    <div class="col-md-6" style="width: 35%">
+                        <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">人物经历</h3>
-                                <div class="right">
-                                    <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-                                    <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-                                </div>
+                                <h3 class="panel-title">关注事件词云展示</h3>
                             </div>
                             <div class="panel-body">
-                                <ul class="list-unstyled todo-list">
-                                    <li>
-                                        <!--											<label class="control-inline fancy-checkbox">-->
-                                        <!--												<input type="checkbox"><span></span>-->
-                                        <!--											</label>-->
-                                        <p>
-                                            <span class="title">中国银保监会发布《银行保险机构声誉风险管理办法（试行）》</span>
-                                            <span class="short-description">新华社</span>
-                                            <span class="date">Oct 9, 2016</span>
-                                        </p>
-                                        <div class="controls">
-                                            <a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!--											<label class="control-inline fancy-checkbox">-->
-                                        <!--												<input type="checkbox"><span></span>-->
-                                        <!--											</label>-->
-                                        <p>
-                                            <span class="title">外交部：请美方开放德特里克堡接受世卫的溯源调查</span>
-                                            <span class="short-description">央视新闻</span>
-                                            <span class="date">Oct 23, 2016</span>
-                                        </p>
-                                        <div class="controls">
-                                            <a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!--											<label class="control-inline fancy-checkbox">-->
-                                        <!--												<input type="checkbox"><span></span>-->
-                                        <!--											</label>-->
-                                        <p>
-                                            <strong>河南济源市委书记被实名举报掌掴市政府秘书长</strong>
-                                            <span class="short-description">中国政务网</span>
-                                            <span class="date">Oct 11, 2016</span>
-                                        </p>
-                                        <div class="controls">
-                                            <a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!-- added by myself &ndash;&gt;-->
-                                <button type="button" class="btn btn-primary btn-bottom center-block">Load More</button>
-
-
+                                <div id="main5" style="width: 400px;height:300px;"></div>
                             </div>
                         </div>
-                        <!-- END TODO LIST -->
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5" style="width: 35%">
                         <!-- TIMELINE -->
                         <div class="panel panel-scrolling">
                             <div class="panel-heading">
-                                <h3 class="panel-title">为政举措</h3>
+                                <h3 class="panel-title">热门推文</h3>
                                 <div class="right">
                                     <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
                                     <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
@@ -276,10 +265,15 @@
                         <!-- END TIMELINE -->
                     </div>
                 </div>
+                    </div>
+                </div>
+                </div>
+                <!-- END TABBED CONTENT -->
+
             </div>
         </div>
         <!-- END MAIN CONTENT -->
-    </div>
+   <!-- </div> -->
     <!-- END MAIN -->
     <div class="clearfix"></div>
     <footer>
@@ -297,9 +291,8 @@
 <script src="static/js/klorofil-common.js"></script>
 <script type="text/javascript">
 
-    //人物关系
-    var chartDom1 = document.getElementById('main1');
-    var myChart1 = echarts.init(chartDom1);
+    //基本信息思维图谱
+    var myChart1 = echarts.init(document.getElementById('main1'));
     var option1;
 
     myChart1.showLoading();
@@ -313,10 +306,7 @@
         });
         option1 = {
             title: {
-                text: 'Les Miserables',
-                subtext: 'Default layout',
-                top: 'bottom',
-                left: 'right'
+                text: '',
             },
             tooltip: {},
             legend: [{
@@ -359,9 +349,8 @@
 
     option1 && myChart1.setOption(option1);
 
-    //人物相关事件
-    var chartDom2 = document.getElementById('main2');
-    var myChart2 = echarts.init(chartDom2);
+    //人物关系图谱
+    var myChart2 = echarts.init(document.getElementById('main2'));
     var option2;
 
     myChart2.showLoading();
@@ -375,10 +364,7 @@
         });
         option2 = {
             title: {
-                text: 'Les Miserables',
-                subtext: 'Default layout',
-                top: 'bottom',
-                left: 'right'
+                text: '',
             },
             tooltip: {},
             legend: [{
@@ -420,6 +406,182 @@
     });
 
     option2 && myChart2.setOption(option2);
+
+    //发表言论所属领域统计
+    var myChart3 = echarts.init(document.getElementById('main3'));
+
+
+    var option3 = {
+        title: {
+            text: '发表言论所属领域统计',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+        },
+        series: [
+            {
+                name: '所属领域',
+                type: 'pie',
+                radius: '50%',
+                data: [
+                    {value: 1048, name: '政治'},
+                    {value: 735, name: '军事'},
+                    {value: 580, name: '娱乐'},
+                    {value: 484, name: '人文'}
+                ],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    option3 && myChart3.setOption(option3);
+
+    //地点统计
+    var myChart4 = echarts.init(document.getElementById('main4'));
+
+
+    var option4 = {
+        title: {
+            text: '地点统计',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+        },
+        series: [
+            {
+                name: '地点',
+                type: 'pie',
+                radius: '50%',
+                data: [
+                    {value: 1048, name: '洛杉矶'},
+                    {value: 735, name: '纽约'},
+                    {value: 580, name: '波士顿'},
+                    {value: 484, name: '北京'}
+                ],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    option4 && myChart4.setOption(option4);
+
+    //关注事件词云展示
+    var myChart5 = echarts.init(document.getElementById('main5'))
+
+    var option5 = {
+        series: [
+        {
+        type: 'wordCloud',
+        gridSize: 2,
+        sizeRange: [12, 50],
+        rotationRange: [-90, 90],
+        shape: 'pentagon',
+        textStyle: {
+            normal: {
+                color: function () {
+                    return 'rgb(' + [
+                            Math.round(Math.random() * 255),
+                            Math.round(Math.random() * 255),
+                            Math.round(Math.random() * 255)
+                        ].join(',') + ')';
+                }
+            },
+            emphasis: {
+                shadowBlur: 10,
+                shadowColor: '#333'
+            }
+        },
+        data: [
+            {
+                name: 'Sam S Club',
+                value: 10000,
+            }, {
+                name: 'Macys',
+                value: 6181
+            }, {
+                name: 'Amy Schumer',
+                value: 4386
+            }, {
+                name: 'Jurassic World',
+                value: 4055
+            }, {
+                name: 'Charter Communications',
+                value: 2467
+            }, {
+                name: 'Chick Fil A',
+                value: 2244
+            }, {
+                name: 'Planet Fitness',
+                value: 1898
+            }, {
+                name: 'Pitch Perfect',
+                value: 1484
+            }, {
+                name: 'Express',
+                value: 1112
+            }, {
+                name: 'Home',
+                value: 965
+            }, {
+                name: 'Johnny Depp',
+                value: 847
+            }, {
+                name: 'Lena Dunham',
+                value: 582
+            }, {
+                name: 'Lewis Hamilton',
+                value: 555
+            }, {
+                name: 'KXAN',
+                value: 550
+            }, {
+                name: 'Mary Ellen Mark',
+                value: 462
+            }, {
+                name: 'Farrah Abraham',
+                value: 366
+            }, {
+                name: 'Rita Ora',
+                value: 360
+            }, {
+                name: 'Serena Williams',
+                value: 282
+            }, {
+                name: 'NCAA baseball tournament',
+                value: 273
+            }, {
+                name: 'Point',
+                value: 273
+            }, {
+                name: 'Point Break',
+                value: 265
+            }]
+    }
+    ]
+    }
+    option5 && myChart5.setOption(option5);
 
 </script>
 
