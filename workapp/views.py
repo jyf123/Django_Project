@@ -114,7 +114,17 @@ def sub12(request):
     return render(request, 'test.html',{'datas':json.dumps(data)})
 
 def sub13(request):
-    return render(request,'people.html')
+    basic_info = [{"name":"特朗普"},
+                  {"birthday":"1946年6月14日"},
+                  {"country":"美国"},
+                  {"nation":"德意志人"}]
+    eduction_ex = ["纽约军事学院","福坦莫大学","宾夕法尼亚大学沃顿商学院"]
+    work_ex = ["从商","演艺","从政"]
+    bidata = [basic_info,eduction_ex,work_ex]
+    return render(request,'people.html',{"test":bidata})
+
+def sub14(request):
+    return render(request,'search.html')
 
 # def upload1(request):
 #     return render(request, 'sub1.html')
