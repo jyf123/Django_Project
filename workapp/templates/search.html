@@ -20,6 +20,47 @@
     <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon.png">
     <script src="static/vendor/jquery/jquery.js"></script>
+    <style>
+        .search-box{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .search-input{
+            width: 400px;
+            height: 45px;
+            border-color: #0ea0db;
+            border-radius: 15px 0px 0px 15px;
+        }
+        .search-btn{
+            color: white;
+        }
+        .search-btn1{
+            width: 80px;
+            height: 45px;
+            border-radius: 0px 15px 15px 0px;
+            border-color: #0ea0db;
+            background: #0ea0db;
+        }
+
+        .search-input1{
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .search-btn2{
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            border-color: #0ea0db;
+            background: #0ea0db;
+        }
+    </style>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -116,9 +157,20 @@
     </nav>
     <!-- END NAVBAR -->
     <form class="search-box">
-        <div class="input-group" style="display: block;width:300px;margin: 0 auto">
-            <input type="text" value="" class="form-control" placeholder="请输入要搜索的人名">
-            <span class="input-group-btn"><button type="button" class="btn btn-primary">搜索</button></span>
+        <div class="search-group1">
+            <input type="text" value="" class="search-input" placeholder="请输入要搜索的人名">
+            <span class="search-btn" ><button type="button" class="search-btn1">搜索</button></span>
+        </div>
+        <br>
+        <div class="search-group2">
+            <h4>高级检索：</h4><br>
+            <p>姓名：<input type="text" value="" class="search-input1" ></p>
+            <p>单位：<input type="text" value="" class="search-input1" ></p>
+            <p>性别：<select name="sex" class="search-input1">
+                <option value="man">男</option>
+                <option value="woman">女</option>
+            </select></p>
+            <span class="search-btn" ><button type="button" class="search-btn2">搜索</button></span>
         </div>
     </form>
 </body>
